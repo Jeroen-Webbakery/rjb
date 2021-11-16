@@ -59,10 +59,8 @@ function register_my_menus()
 
 add_action('init', 'register_my_menus');
 
-
 // Gutenberg uitschakelen
 add_filter('use_block_editor_for_post', '__return_false', 10);
-
 // Disable WordPress Admin Bar for all users
 add_filter('show_admin_bar', '__return_false');
 
