@@ -90,8 +90,6 @@ require get_template_directory() . '/inc/custom-dashboard-items.php';
 require get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
 /** Implement the Custom Header feature. */
 require get_template_directory() . '/inc/custom-header.php';
-/** Read time. */
-require get_template_directory() . '/inc/read-time.php';
 /** SVG  Support. */
 require get_template_directory() . '/inc/support-svg.php';
 
