@@ -3,8 +3,10 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 
+require_once(get_stylesheet_directory() . '/inc/post-types/portfolio.php');
 
 add_theme_support('title-tag');
+add_theme_support('custom-logo');
 
 function understrap_remove_scripts()
 {
@@ -25,18 +27,12 @@ function theme_enqueue_styles()
 {
     // Get the theme data
     $the_theme = wp_get_theme();
-    wp_enqueue_style('child-understrap-styles', get_stylesheet_directory_uri() . '/css/thebridge.min.css', array(), $the_theme->get('Version'));
+    wp_enqueue_style('child-understrap-styles', get_stylesheet_directory_uri() . '/css/rjb.min.css', array(), $the_theme->get('Version'));
     wp_enqueue_script('jquery');
-    wp_enqueue_script('child-understrap-scripts', get_stylesheet_directory_uri() . '/js/thebridge.min.js', array(), $the_theme->get('Version'), true);
+    wp_enqueue_script('child-understrap-scripts', get_stylesheet_directory_uri() . '/js/rjb.min.js', array(), $the_theme->get('Version'), true);
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
-}
-
-function my_register_script_method()
-{
-    wp_deregister_script('jquery');
-    wp_register_script('jquery', get_stylesheet_directory_uri() . '/js/jquery-3.6.0.min.js');
 }
 
 
@@ -68,26 +64,16 @@ add_filter('show_admin_bar', '__return_false');
 // This theme uses wp_nav_menu() in one location.
 register_nav_menus(
     array(
-        'links' => esc_html__('Menu Links', 'thebridge'),
-        'rechts' => esc_html__('Menu rechts', 'thebridge'),
-        'mobile' => esc_html__('Mobile menu', 'thebridge'),
+        'primary' => esc_html__('Primary', 'cornelis'),
     )
 );
 
 /** ACF Option pages */
 require get_template_directory() . '/inc/acf.php';
-/** Custom login */
+/** ACF Option pages */
 require get_template_directory() . '/inc/custom-login.php';
-/** Remove dashboard items  */
-require get_template_directory() . '/inc/remove-dashboard-items.php';
-/** Support dashboard items */
-require get_template_directory() . '/inc/support-dashboard-item.php';
-/** Custom dashboard items */
-require get_template_directory() . '/inc/custom-dashboard-items.php';
 /** Implement the Navwalker */
 require get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
-/** Implement the Custom Header feature. */
-require get_template_directory() . '/inc/custom-header.php';
 /** SVG  Support. */
 require get_template_directory() . '/inc/support-svg.php';
 
@@ -115,5 +101,6 @@ remove_action('wp_head', 'parent_post_rel_link', 10, 0); // prev link
 remove_action('wp_head', 'start_post_rel_link', 10, 0); // start link
 remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0); // Display relational links for the posts adjacent to the current post.
 remove_action('wp_head', 'wp_generator'); // Display the XHTML generator that is
+
 
 
