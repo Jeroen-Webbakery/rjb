@@ -7082,11 +7082,11 @@ img.mfp-img {
     position: relative;
   }
 
-  .logo {
+  .logo_block {
     left: 15px;
     top: 15px;
   }
-  .logo svg {
+  .logo_block svg {
     width: 235px;
     height: auto;
   }
@@ -7421,7 +7421,22 @@ img.mfp-img {
   background-repeat: no-repeat;
 }
 
-.page-template-about .logo svg path, .page-template-about .logo svg polygon, .page-template-portfolio .logo svg path, .page-template-portfolio .logo svg polygon, .white .logo svg path, .white .logo svg polygon {
+.logo .logo_white path, .logo .logo_white polygon {
+  fill: #fff;
+}
+
+.logo_block {
+  position: absolute;
+  top: 25px;
+  left: 85px;
+  z-index: 10;
+}
+@media (max-width: 1799px) and (min-width: 1024px) {
+  .logo_block {
+    left: 4.7222222222vw;
+  }
+}
+.logo_block .logo_white path, .logo_block .logo_white polygon {
   fill: #fff;
 }
 
@@ -24593,11 +24608,11 @@ img.mfp-img {
     position: relative;
   }
 
-  .logo {
+  .logo_block {
     left: 15px;
     top: 15px;
   }
-  .logo svg {
+  .logo_block svg {
     width: 235px;
     height: auto;
   }
