@@ -217,7 +217,7 @@ global $post;
 
 
     <!-- ******************* The Navbar Area ******************* -->
-    <div id="wrapper-navbar">
+    <div id="wrapper-navbar" class="navbar">
         <nav id="main-nav" class="navbar navbar-expand-md navbar-dark bg-primary" aria-labelledby="main-nav-label">
             <div class="menu_container px-lg-0">
                 <div class="row">
