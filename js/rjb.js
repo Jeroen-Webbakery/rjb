@@ -1,6 +1,4 @@
-import barba from '@barba/core';
 import AOS from 'aos';
-import gsap from 'gsap';
 import {TimelineMax} from "gsap/all";
 
 
