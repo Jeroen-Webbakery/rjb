@@ -6116,7 +6116,7 @@ body, #page {
   width: 100%;
   height: 100%;
   display: none;
-  z-index: 99;
+  z-index: 99999;
 }
 .loader__element {
   position: absolute;
