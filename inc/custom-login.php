@@ -4,7 +4,7 @@ function eigen_login_logo()
 { ?>
     <style type="text/css">
         .login {
-            background-image: url(<?php echo get_site_url(); ?>/wp-content/uploads/2021/11/header-1.jpg);
+            background-image: url(<?php echo get_site_url(); ?>/wp-content/uploads/2021/12/header.jpg);
             background-size: cover !important;
             position: relative;
         }
@@ -23,7 +23,7 @@ function eigen_login_logo()
         }
 
         #login h1 a, .login h1 a {
-            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/svg/cornelis-logo.svg);
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/svg/rjb-logo-black.svg);
             width: 300px;
             height: 50px;
             background-size: contain;
