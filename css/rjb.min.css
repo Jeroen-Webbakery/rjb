@@ -7162,6 +7162,9 @@ img.mfp-img {
     padding: 0;
     display: none !important;
   }
+  .language .dropdown-menu .menu-item {
+    padding-left: 0;
+  }
   .language .dropdown-menu .menu-item a {
     font-family: "Akzidenz Grotesk", san serif !important;
     font-size: 14px !important;
@@ -7181,7 +7184,7 @@ img.mfp-img {
   .top_menu .menu_button.open {
     width: 38px;
   }
-  .top_menu .menu_button .close span {
+  .top_menu .menu_button .close span, .top_menu .menu_button .open span {
     display: none;
   }
   .top_menu .menu_button svg {
@@ -24857,6 +24860,9 @@ img.mfp-img {
     padding: 0;
     display: none !important;
   }
+  .language .dropdown-menu .menu-item {
+    padding-left: 0;
+  }
   .language .dropdown-menu .menu-item a {
     font-family: "Akzidenz Grotesk", san serif !important;
     font-size: 14px !important;
@@ -24876,7 +24882,7 @@ img.mfp-img {
   .top_menu .menu_button.open {
     width: 38px;
   }
-  .top_menu .menu_button .close span {
+  .top_menu .menu_button .close span, .top_menu .menu_button .open span {
     display: none;
   }
   .top_menu .menu_button svg {
