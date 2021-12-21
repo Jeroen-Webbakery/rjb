@@ -7104,7 +7104,7 @@ img.mfp-img {
     height: auto;
   }
   .menu_container .col_left #navbarNavDropdown {
-    margin-top: 50px;
+    margin-top: 15px;
   }
   .menu_container .col_left #navbarNavDropdown #main-menu .menu-item .nav-link {
     font-size: 30px;
@@ -7168,6 +7168,8 @@ img.mfp-img {
   .language .dropdown-menu .menu-item a {
     font-family: "Akzidenz Grotesk", san serif !important;
     font-size: 14px !important;
+    line-height: 26px;
+    padding: 0;
   }
   .language:hover .dropdown-menu {
     display: block !important;
@@ -7179,6 +7181,9 @@ img.mfp-img {
   }
   .top_menu .menu_button {
     height: 38px;
+    width: 38px;
+  }
+  .top_menu .menu_button:hover {
     width: 38px;
   }
   .top_menu .menu_button.open {
@@ -24802,7 +24807,7 @@ img.mfp-img {
     height: auto;
   }
   .menu_container .col_left #navbarNavDropdown {
-    margin-top: 50px;
+    margin-top: 15px;
   }
   .menu_container .col_left #navbarNavDropdown #main-menu .menu-item .nav-link {
     font-size: 30px;
@@ -24866,6 +24871,8 @@ img.mfp-img {
   .language .dropdown-menu .menu-item a {
     font-family: "Akzidenz Grotesk", san serif !important;
     font-size: 14px !important;
+    line-height: 26px;
+    padding: 0;
   }
   .language:hover .dropdown-menu {
     display: block !important;
@@ -24877,6 +24884,9 @@ img.mfp-img {
   }
   .top_menu .menu_button {
     height: 38px;
+    width: 38px;
+  }
+  .top_menu .menu_button:hover {
     width: 38px;
   }
   .top_menu .menu_button.open {
