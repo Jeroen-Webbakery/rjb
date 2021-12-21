@@ -125,7 +125,7 @@ else :
         </li>
     </ul>
 
-    <div class="menu_button">
+    <div class="menu_button menu_closed">
         <div class="open">
             <span>menu</span>
             <svg class="open_icon" width="21px" height="15px" viewBox="0 0 21 15" version="1.1"

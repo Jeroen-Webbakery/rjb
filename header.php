@@ -103,16 +103,6 @@ global $post;
 
                         barba.hooks.enter(() => {
 
-                            $(".menu_button").click(function () {
-                                $(".open_icon, .close, .close_icon").toggleClass("hide");
-                                $(".menu_button, #wrapper-navbar, .top_menu").toggleClass("open");
-                                $(".nav-link, .dropdown-item, .menu_info").toggleClass("fade_in");
-                            });
-
-                            $(".nav-link, .dropdown-item, .navbar-brand").click(function () {
-                                $(".open_icon, .close, .close_icon").toggleClass("hide");
-                                $(".menu_button, #wrapper-navbar").removeClass("open");
-                            });
 
                             function homeSlider() {
                                 $('.header_slider').slick({
@@ -186,18 +176,23 @@ global $post;
                         });
 
                         barba.hooks.afterEnter(() => {
+
                             $(".menu_button").click(function () {
-                                $(".open_icon, .close, .close_icon").toggleClass("hide");
-                                $(".menu_button, #wrapper-navbar, .top_menu").toggleClass("open");
-                                $(".nav-link, .dropdown-item, .menu_info").toggleClass("fade_in");
+                                $(".open_icon").toggleClass("hide");
+                                $(".close, .close_icon").toggleClass("hide");
+                                $(".menu_button, #wrapper-navbar").toggleClass("open");
+                                $(".nav-link, .dropdown-item, .menu_info").togglClass("fade_in");
+                                $(".top_menu").addClass("black");
                             });
 
-                            $(".nav-link, .dropdown-item, .navbar-brand").click(function () {
-                                $(".open_icon, .close, .close_icon").toggleClass("hide");
-                                $(".menu_button, #wrapper-navbar").removeClass("open");
+                            $(".nav-link, .dropdown-item, .navbar-brand, .menu_button.open").click(function () {
+                                $(".menu_button").addClass("menu_closed").removeClass("menu_open");
+                                $(".open_icon").removeClass("hide");
+                                $(".close, .close_icon").addClass("hide");
+                                $(".menu_button, #wrapper-navbar, .top_menu").removeClass("open");
+                                $(".top_menu").removeClass("black");
                             });
                         });
-
 
                     },
                 },
