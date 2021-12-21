@@ -14,7 +14,7 @@ $(document).ready(function () {
         $(".close, .close_icon").toggleClass("hide");
         $(".menu_button, #wrapper-navbar").toggleClass("open");
         $(".nav-link, .dropdown-item, .menu_info").toggleClass("fade_in");
-        $(".top_menu").addClass("black");
+        $(".top_menu").toggleClass("black");
     });
 
     $(".nav-link, .dropdown-item, .navbar-brand, .menu_button.open").click(function () {
