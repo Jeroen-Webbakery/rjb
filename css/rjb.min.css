@@ -7089,6 +7089,10 @@ img.mfp-img {
     height: auto;
   }
 
+  #start_screen #start_logo {
+    width: 80%;
+  }
+
   .menu_container .col_left {
     padding: 15px 35px;
     height: auto;
@@ -24593,6 +24597,10 @@ img.mfp-img {
   .logo svg {
     width: 235px;
     height: auto;
+  }
+
+  #start_screen #start_logo {
+    width: 80%;
   }
 
   .menu_container .col_left {
