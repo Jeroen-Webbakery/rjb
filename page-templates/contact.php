@@ -14,13 +14,7 @@ get_header();
 ?>
 
     <div data-barba="container" data-barba-namespace="header">
-        <?php if (get_field('logo_kleur') === true) : ?>
-            <script>
-                $(document).ready(function () {
-                    $("body").addClass("white");
-                });
-            </script>
-        <?php endif; ?>
+        <?php get_template_part('partials/header-options', 'content'); ?>
         <section id="header" class="contact">
             <div class="row">
                 <div class="col-9 col-lg-8 image col_left image"

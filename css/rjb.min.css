@@ -7149,13 +7149,38 @@ img.mfp-img {
     fill: #fff;
   }
 
-  .menu_button {
+  .language .nav-link {
+    font-family: "Akzidenz Grotesk", san serif !important;
+    font-size: 14px !important;
+  }
+  .language .dropdown-menu {
+    margin: 0;
+    padding: 0;
+    display: none !important;
+  }
+  .language .dropdown-menu .menu-item a {
+    font-family: "Akzidenz Grotesk", san serif !important;
+    font-size: 14px !important;
+  }
+  .language:hover .dropdown-menu {
+    display: block !important;
+  }
+
+  .top_menu {
+    right: 25px;
+    top: 20px;
+  }
+  .top_menu .menu_button {
     height: 38px;
     width: 38px;
-    right: 8px;
-    top: 15px;
   }
-  .menu_button svg {
+  .top_menu .menu_button.open {
+    width: 38px;
+  }
+  .top_menu .menu_button .close span {
+    display: none;
+  }
+  .top_menu .menu_button svg {
     height: 13px;
     width: auto;
   }
@@ -7440,7 +7465,87 @@ img.mfp-img {
   fill: #fff;
 }
 
-.menu_button {
+.menu_info {
+  position: absolute;
+  bottom: 50px;
+}
+.menu_info.fade_in .menu_info_items a, .menu_info.fade_in .menu_info_items span {
+  -webkit-animation: fadeInDown;
+          animation: fadeInDown;
+  -webkit-animation-delay: 0.05s;
+          animation-delay: 0.05s;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+.menu_info .menu_info_items {
+  position: relative;
+  overflow: hidden;
+}
+.menu_info a, .menu_info span {
+  color: #1D1D1B;
+  font-size: 14px;
+  font-family: "Akzidenz Grotesk", san serif;
+  font-weight: 300;
+}
+.menu_info a {
+  cursor: pointer;
+  margin: 0 7.5px;
+}
+
+.top_menu {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+}
+.top_menu.white ul li {
+  color: #fff;
+}
+.top_menu.white.open ul li {
+  color: #1D1D1B;
+}
+.top_menu ul {
+  list-style: none;
+  margin-right: 15px;
+  margin-bottom: 0;
+  padding-left: 0;
+  position: relative;
+}
+.top_menu ul li {
+  color: #1D1D1B;
+  font-family: "Akzidenz Grotesk", san serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1.6px;
+}
+.top_menu ul li i {
+  margin-left: 5px;
+}
+.top_menu ul li .dropdown {
+  visibility: hidden;
+  cursor: none;
+  position: absolute;
+  background: white;
+  padding: 10px 15px;
+  width: 100%;
+  transform: translateY(5px);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+.top_menu ul li .dropdown li a {
+  color: #1D1D1B;
+  font-family: "Akzidenz Grotesk", san serif;
+  font-size: 14px;
+}
+.top_menu ul li:hover .dropdown {
+  visibility: visible;
+  transform: translateY(0px);
+  cursor: pointer;
+  opacity: 1;
+}
+.top_menu .menu_button {
   background: #A87D4B;
   border-radius: 50%;
   height: 54px;
@@ -7450,18 +7555,14 @@ img.mfp-img {
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s linear;
-  position: fixed;
-  top: 20px;
-  right: 24px;
-  z-index: 999;
   overflow: hidden;
   font-family: "Akzidenz Grotesk", san serif;
 }
-.menu_button .open {
+.top_menu .menu_button .open {
   display: flex;
   align-items: center;
 }
-.menu_button .open span {
+.top_menu .menu_button .open span {
   color: #fff;
   margin-right: 0;
   font-size: 0;
@@ -7469,47 +7570,111 @@ img.mfp-img {
   height: 0;
   transition: all 0.3s linear;
 }
-.menu_button .close, .menu_button .open_icon, .menu_button .close_icon {
+.top_menu .menu_button .close, .top_menu .menu_button .open_icon, .top_menu .menu_button .close_icon {
   font-size: 16px;
 }
-.menu_button .close.hide, .menu_button .open_icon.hide, .menu_button .close_icon.hide {
+.top_menu .menu_button .close.hide, .top_menu .menu_button .open_icon.hide, .top_menu .menu_button .close_icon.hide {
   font-size: 0;
   width: 0;
   height: 0;
 }
-.menu_button .close {
+.top_menu .menu_button .close {
   display: flex;
   align-items: center;
 }
-.menu_button .close svg {
+.top_menu .menu_button .close svg {
   width: 12px;
   height: 12px;
 }
-.menu_button .close span {
+.top_menu .menu_button .close span {
   color: #fff;
   margin-right: 10px;
 }
-.menu_button.open {
+.top_menu .menu_button.open {
   width: 101px;
   border-radius: 27px;
 }
-.menu_button:hover {
+.top_menu .menu_button:hover {
   width: 101px;
   border-radius: 27px;
 }
-.menu_button:hover .open span {
+.top_menu .menu_button:hover .open span {
   font-size: 16px;
   width: 40px;
   height: 24px;
   margin-right: 10px;
 }
-.menu_button.open:hover .open span {
+.top_menu .menu_button.open:hover .open span {
   margin-right: 0;
   font-size: 0;
   width: 0;
   height: 0;
   visibility: hidden;
   display: none;
+}
+
+.menu_container::before {
+  content: "";
+  background: #1D1D1B;
+  opacity: 0;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: none;
+  transition: all 0.3s ease-in-out;
+  z-index: 998;
+  visibility: hidden;
+}
+.menu_container.fade_out::before {
+  opacity: 0.5;
+  visibility: visible;
+}
+
+.modal {
+  z-index: 999;
+  position: fixed;
+  top: 200%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 100%;
+  max-width: 800px;
+  height: 500px;
+  transition: all 0.3s ease-in-out;
+  padding: 25px;
+  overflow: scroll;
+  display: block !important;
+}
+@media (max-width: 1799px) and (min-width: 1024px) {
+  .modal {
+    max-width: 44.4444444444vw;
+  }
+}
+.modal .close {
+  font-family: "Akzidenz Grotesk", san serif;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 15px;
+  background: #1D1D1B;
+  color: #fff !important;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal h4 {
+  font-family: "Akzidenz Grotesk", san serif;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+.modal.active {
+  top: 50%;
+  opacity: 1 !important;
 }
 
 .modal {
@@ -24675,13 +24840,38 @@ img.mfp-img {
     fill: #fff;
   }
 
-  .menu_button {
+  .language .nav-link {
+    font-family: "Akzidenz Grotesk", san serif !important;
+    font-size: 14px !important;
+  }
+  .language .dropdown-menu {
+    margin: 0;
+    padding: 0;
+    display: none !important;
+  }
+  .language .dropdown-menu .menu-item a {
+    font-family: "Akzidenz Grotesk", san serif !important;
+    font-size: 14px !important;
+  }
+  .language:hover .dropdown-menu {
+    display: block !important;
+  }
+
+  .top_menu {
+    right: 25px;
+    top: 20px;
+  }
+  .top_menu .menu_button {
     height: 38px;
     width: 38px;
-    right: 8px;
-    top: 15px;
   }
-  .menu_button svg {
+  .top_menu .menu_button.open {
+    width: 38px;
+  }
+  .top_menu .menu_button .close span {
+    display: none;
+  }
+  .top_menu .menu_button svg {
     height: 13px;
     width: auto;
   }

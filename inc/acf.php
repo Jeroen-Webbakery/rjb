@@ -18,5 +18,11 @@ if (function_exists('acf_add_options_page')) {
         'parent_slug'	=> 'thema-settings',
     ));
 
+    acf_add_options_sub_page(array(
+        'page_title' 	=> 'Privacy & Disclaimer',
+        'menu_title'	=> 'Privacy & disclaimer',
+        'parent_slug'	=> 'thema-settings',
+    ));
+
 
 }
