@@ -7149,6 +7149,10 @@ img.mfp-img {
     fill: #fff;
   }
 
+  .menu_info {
+    bottom: 15px;
+  }
+
   .language .nav-link {
     font-family: "Akzidenz Grotesk", san serif !important;
     font-size: 14px !important;
@@ -24838,6 +24842,10 @@ img.mfp-img {
   }
   .home .logo svg path, .home .logo svg polygon {
     fill: #fff;
+  }
+
+  .menu_info {
+    bottom: 15px;
   }
 
   .language .nav-link {
