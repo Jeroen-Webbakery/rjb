@@ -6490,8 +6490,10 @@ body, #page {
   transition: all 0.3s ease-in-out;
 }
 .portfolio_items .portfolio_item .block .title {
+  margin-top: 15px;
   font-size: 20px;
-  font-weight: 300;
+  font-family: "Akzidenz Grotesk", san serif;
+  font-weight: 500;
   color: #1D1D1B;
 }
 .portfolio_items .portfolio_item .block .content p {
@@ -7281,6 +7283,7 @@ img.mfp-img {
   .portfolio_items .portfolio_item {
     width: 100% !important;
     border-right: none;
+    padding: 10px 25px 25px 25px;
   }
   .portfolio_items .portfolio_item:nth-child(1) .block img, .portfolio_items .portfolio_item:nth-child(4) .block img {
     height: 445px;
@@ -24791,6 +24794,7 @@ img.mfp-img {
   .portfolio_items .portfolio_item {
     width: 100% !important;
     border-right: none;
+    padding: 10px 25px 25px 25px;
   }
   .portfolio_items .portfolio_item:nth-child(1) .block img, .portfolio_items .portfolio_item:nth-child(4) .block img {
     height: 445px;
