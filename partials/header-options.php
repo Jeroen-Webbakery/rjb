@@ -1,3 +1,7 @@
+<?php if ( is_single()) :
+    // Do nothing
+else :
+?>
 <div class="logo_block">
     <a class="navbar-brand" rel="home" href="<?php echo esc_url(home_url('/')); ?>"
        title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" itemprop="url">
@@ -109,6 +113,7 @@
         <?php endif; ?>
     </a>
 </div>
+<?php endif; ?>
 
 <div class="top_menu <?php if (get_field('lang_kleur') === true) : echo "white"; endif;?>">
     <ul class="d-none d-lg-block">

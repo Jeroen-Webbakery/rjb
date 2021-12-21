@@ -7358,7 +7358,7 @@ img.mfp-img {
 }
 @media (max-width: 1799px) and (min-width: 1024px) {
   #navbarNavDropdown {
-    margin-top: 5.5555555556vw;
+    margin-top: 4.1666666667vw;
   }
 }
 #navbarNavDropdown #main-menu {
@@ -7535,6 +7535,7 @@ img.mfp-img {
   font-weight: 700;
   font-size: 12px;
   letter-spacing: 1.6px;
+  transition: all 0.3s ease-in-out;
 }
 .top_menu ul li i {
   margin-left: 5px;

@@ -103,6 +103,17 @@ global $post;
 
                         barba.hooks.enter(() => {
 
+                            $(".menu_button").click(function () {
+                                $(".open_icon, .close, .close_icon").toggleClass("hide");
+                                $(".menu_button, #wrapper-navbar, .top_menu").toggleClass("open");
+                                $(".nav-link, .dropdown-item, .menu_info").toggleClass("fade_in");
+                            });
+
+                            $(".nav-link, .dropdown-item, .navbar-brand").click(function () {
+                                $(".open_icon, .close, .close_icon").toggleClass("hide");
+                                $(".menu_button, #wrapper-navbar").removeClass("open");
+                            });
+
                             function homeSlider() {
                                 $('.header_slider').slick({
                                     infinite: true,
