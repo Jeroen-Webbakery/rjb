@@ -115,12 +115,17 @@ else :
     </div>
 <?php endif; ?>
 
+<?php
+global $post;
+$page_slug = $post->post_name;
+?>
+
 <div class="top_menu <?php if (get_field('lang_kleur') === true) : echo "white"; endif;?>" data-barba-prevent="all">
     <ul class="d-none d-lg-block">
         <li>CHANGE LANGUAGE <i class="far fa-chevron-down"></i>
             <ul class="dropdown">
-                <li><a href="<?php echo get_site_url();?>/">NL</a></li>
-                <li><a href="<?php echo get_site_url();?>/en">EN</a></li>
+                <li><a href="<?php echo get_site_url();?>/<?= $page_slug ?>">NL</a></li>
+                <li><a href="<?php echo get_site_url();?>/en/<?= $page_slug ?>">EN</a></li>
             </ul>
         </li>
     </ul>
