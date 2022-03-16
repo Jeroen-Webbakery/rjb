@@ -29,14 +29,14 @@ global $post;
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="profile" href="http://gmpg.org/xfn/11">
-    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.cookie.min.js"></script>
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/aos.css">
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.cookie.min.js"></script>
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/aos.css">
     <script type="text/javascript"
             src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-    <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/gallery.js"></script>
-    <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/slick.css">
-    <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/slick.min.js"></script>
+    <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/gallery.js"></script>
+    <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/slick.css">
+    <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/slick.min.js"></script>
     <script src="https://unpkg.com/@barba/core"></script>
     <script src="https://unpkg.com/gsap@latest/dist/gsap.min.js"></script>
     <script>
@@ -290,7 +290,7 @@ global $post;
                         ?>
                         <div class="menu_info">
                             <div class="menu_info_items">
-                                <span>RJB ©<?php the_date('Y') ?> 2021</span> <a
+                                <span>RJB ©<?php the_date('Y') ?></span> <a
                                         class="disclaimer_modal_link modal_link">Disclaimer</a> <a
                                         class="privacy_modal_link modal_link">Privacy
                                     Statement</a>

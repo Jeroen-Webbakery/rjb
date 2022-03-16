@@ -57,7 +57,9 @@ $description = term_description();
                             <div class="block">
                                 <div class="img_block">
                                     <?php echo get_the_post_thumbnail(get_the_id(), 'post_thumbnail', array('class' => 'portfolio_img')) ?>
-                                    <span class="category"><?php echo $term->name ?></span>
+                                    <div class="categorys">
+                                        <span class="category"><?php echo $term->name ?></span>
+                                    </div>
                                 </div>
                                 <h2 class="title"><?php the_title(); ?></h2>
                                 <div class="content">

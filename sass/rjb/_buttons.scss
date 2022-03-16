@@ -1,0 +1,21 @@
+.btn {
+    text-decoration: none;
+    font-weight: 500;
+    padding: 15px 30px;
+    transition: all .3s ease-in-out;
+    width: max-content;
+    font-family: $secondary;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.btn_black {
+    border: 1px solid $black;
+    color: $black;
+
+    &:hover {
+        background: $black;
+        color: $white;
+    }
+}
