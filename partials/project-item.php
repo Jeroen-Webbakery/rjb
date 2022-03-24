@@ -2,7 +2,7 @@
     <a href="<?php get_the_permalink(); ?>">
         <div class="block">
             <div class="img_block">
-                <?php echo get_the_post_thumbnail(get_the_id(), 'post_thumbnail', array('class' => 'portfolio_img')) ?>
+                <?php echo get_the_post_thumbnail(get_the_id(), 'full', array('class' => 'portfolio_img')) ?>
                 <div class="categorys">
                     <?php
                     $terms = wp_get_post_terms(get_the_id(), 'portfolio_category');

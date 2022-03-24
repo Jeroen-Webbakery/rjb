@@ -48,18 +48,23 @@ get_header();
                     'post_type' => 'portfolio',
                     'posts_per_page' => -1, // Aantal posts
                     'order' => 'DESC',
-
+                    'meta_query' => array(
+                        array(
+                            'key'   => 'project_development',
+                            'value' => '1',
+                        )
+                    )
                 );
                 $query = new WP_Query($args);
                 while ($query->have_posts()) : $query->the_post();
-                    if (get_field('project_development') === true) :
+
 
 
                         get_template_part('partials/portfolio-item', 'content');
 
 
-                    endif; ?>
-                    <?php wp_reset_postdata(); ?>
+
+                     wp_reset_postdata(); ?>
                 <?php endwhile; ?>
             </div>
         </section>

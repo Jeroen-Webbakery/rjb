@@ -59,26 +59,24 @@
       }
     }
 
-    &:nth-child(1) {
-      width: 33.333%;
-      border-right: 1px solid $black;
-      border-bottom: 1px solid $black;
+    $colsSmall: 1, 4, 5, 8, 9, 12, 13, 16, 17, 20, 23, 24, 27, 28, 31, 32;
+
+    @each $colSmall in $colsSmall {
+      &:nth-child(#{$colSmall}) {
+        width: 33.333%;
+        border-right: 1px solid $black;
+        border-bottom: 1px solid $black;
+      }
     }
 
-    &:nth-child(2) {
-      width: 66.66667%;
-      border-bottom: 1px solid $black;
-    }
+    $colsBig: 2, 3, 6, 7, 10, 11, 14, 15, 18, 19, 21, 22, 25, 26, 29, 30;
 
-    &:nth-child(3) {
-      width: 66.66667%;
-      border-right: 1px solid $black;
-      border-bottom: 1px solid $black;
-    }
-
-    &:nth-child(4) {
-      width: 33.333%;
-      border-bottom: 1px solid $black;
+    @each $colBig in $colsBig {
+      &:nth-child(#{$colBig}) {
+        width: 66.66667%;
+        border-right: 1px solid $black;
+        border-bottom: 1px solid $black;
+      }
     }
   }
 }

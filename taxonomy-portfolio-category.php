@@ -56,7 +56,7 @@ $description = term_description();
                         <a href="<?php the_permalink(); ?>">
                             <div class="block">
                                 <div class="img_block">
-                                    <?php echo get_the_post_thumbnail(get_the_id(), 'post_thumbnail', array('class' => 'portfolio_img')) ?>
+                                    <?php echo get_the_post_thumbnail(get_the_id(), 'full', array('class' => 'portfolio_img')) ?>
                                     <div class="categorys">
                                         <span class="category"><?php echo $term->name ?></span>
                                     </div>

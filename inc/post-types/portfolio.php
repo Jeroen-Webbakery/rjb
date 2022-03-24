@@ -48,10 +48,10 @@ function portfolio()
         'show_in_admin_bar' => true,
         'show_in_nav_menus' => true,
         'can_export' => true,
-        'has_archive' => false,
+        'has_archive' => true,
         'exclude_from_search' => true,
         'publicly_queryable' => true,
-        'capability_type' => 'post',
+        'capability_type' => 'page',
     );
     register_post_type('portfolio', $args);
 
@@ -59,51 +59,49 @@ function portfolio()
 
 add_action('init', 'portfolio', 0);
 
-if ( ! function_exists( 'portfolio_category' ) ) {
-
 // Register Custom Taxonomy
-    function portfolio_category() {
+function portfolio_category()
+{
 
-        $labels = array(
-            'name'                       => _x( 'Portfolio categorieën', 'Taxonomy General Name', 'rjb' ),
-            'singular_name'              => _x( 'Portfolio category', 'Taxonomy Singular Name', 'rjb' ),
-            'menu_name'                  => __( 'Portfolio category', 'rjb' ),
-            'all_items'                  => __( 'Portfolio categorieën', 'rjb' ),
-            'parent_item'                => __( 'Parent Item', 'rjb' ),
-            'parent_item_colon'          => __( 'Parent Item:', 'rjb' ),
-            'new_item_name'              => __( 'Voeg nieuwe portfolio category toe', 'rjb' ),
-            'add_new_item'               => __( 'Voeg nieuwe portfolio category toe', 'rjb' ),
-            'edit_item'                  => __( 'Wijzig portfolio category', 'rjb' ),
-            'update_item'                => __( 'Update portfolio category', 'rjb' ),
-            'view_item'                  => __( 'Bekijk portfolio category', 'rjb' ),
-            'separate_items_with_commas' => __( 'Separate items with commas', 'rjb' ),
-            'add_or_remove_items'        => __( 'Add or remove items', 'rjb' ),
-            'choose_from_most_used'      => __( 'Choose from the most used', 'rjb' ),
-            'popular_items'              => __( 'Popular Items', 'rjb' ),
-            'search_items'               => __( 'Search Items', 'rjb' ),
-            'not_found'                  => __( 'Not Found', 'rjb' ),
-            'no_terms'                   => __( 'No items', 'rjb' ),
-            'items_list'                 => __( 'Items list', 'rjb' ),
-            'items_list_navigation'      => __( 'Items list navigation', 'rjb' ),
-        );
+    $labels = array(
+        'name' => _x('Portfolio categorieën', 'Taxonomy General Name', 'rjb'),
+        'singular_name' => _x('Portfolio category', 'Taxonomy Singular Name', 'rjb'),
+        'menu_name' => __('Portfolio category', 'rjb'),
+        'all_items' => __('Portfolio categorieën', 'rjb'),
+        'parent_item' => __('Parent Item', 'rjb'),
+        'parent_item_colon' => __('Parent Item:', 'rjb'),
+        'new_item_name' => __('Voeg nieuwe portfolio category toe', 'rjb'),
+        'add_new_item' => __('Voeg nieuwe portfolio category toe', 'rjb'),
+        'edit_item' => __('Wijzig portfolio category', 'rjb'),
+        'update_item' => __('Update portfolio category', 'rjb'),
+        'view_item' => __('Bekijk portfolio category', 'rjb'),
+        'separate_items_with_commas' => __('Separate items with commas', 'rjb'),
+        'add_or_remove_items' => __('Add or remove items', 'rjb'),
+        'choose_from_most_used' => __('Choose from the most used', 'rjb'),
+        'popular_items' => __('Popular Items', 'rjb'),
+        'search_items' => __('Search Items', 'rjb'),
+        'not_found' => __('Not Found', 'rjb'),
+        'no_terms' => __('No items', 'rjb'),
+        'items_list' => __('Items list', 'rjb'),
+        'items_list_navigation' => __('Items list navigation', 'rjb'),
+    );
 //        $rewrite = array(
 //            'slug'              => 'portfolio/category',
 //            'with_front'        => true,
 //            'hierarchical'       => true
 //        );
-        $args = array(
-            'labels'                     => $labels,
-            'hierarchical'               => true,
-            'public'                     => true,
-            'show_ui'                    => true,
-            'show_admin_column'          => true,
-            'show_in_nav_menus'          => true,
-            'show_tagcloud'              => true,
+    $args = array(
+        'labels' => $labels,
+        'hierarchical' => true,
+        'public' => true,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'show_in_nav_menus' => true,
+        'show_tagcloud' => true,
 //            'rewrite'                   => $rewrite,
-        );
-        register_taxonomy( 'portfolio-category', array( 'portfolio' ), $args );
-
-    }
-    add_action( 'init', 'portfolio_category', 0 );
+    );
+    register_taxonomy('portfolio-category', array('portfolio'), $args);
 
 }
+
+add_action('init', 'portfolio_category', 0);
