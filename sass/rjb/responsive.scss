@@ -93,6 +93,13 @@
       margin: 0;
       padding: 0;
       display: none !important;
+
+      li {
+        .dropdown-item {
+          font-size: 14px !important;
+          font-family: $secondary !important;
+        }
+      }
     }
 
     &:hover {

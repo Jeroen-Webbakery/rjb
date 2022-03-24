@@ -13,7 +13,9 @@ $(document).ready(function () {
         $(".open_icon").toggleClass("hide");
         $(".close, .close_icon").toggleClass("hide");
         $(".menu_button, #wrapper-navbar").toggleClass("open");
-        $(".nav-link, .dropdown-item, .menu_info").toggleClass("fade_in");
+        if ($( window ).width() > 1024 ) {
+            $(".nav-link, .dropdown-item, .menu_info").toggleClass("fade_in");
+        }
         $(".top_menu").toggleClass("black");
     });
 

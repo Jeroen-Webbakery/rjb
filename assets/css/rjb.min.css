@@ -7298,6 +7298,10 @@ img.mfp-img {
     padding: 0;
     display: none !important;
   }
+  .language .dropdown-menu li .dropdown-item {
+    font-size: 14px !important;
+    font-family: "Akzidenz Grotesk", san serif !important;
+  }
   .language:hover .dropdown-menu {
     display: block !important;
   }
@@ -24925,6 +24929,10 @@ img.mfp-img {
     margin: 0;
     padding: 0;
     display: none !important;
+  }
+  .language .dropdown-menu li .dropdown-item {
+    font-size: 14px !important;
+    font-family: "Akzidenz Grotesk", san serif !important;
   }
   .language:hover .dropdown-menu {
     display: block !important;
